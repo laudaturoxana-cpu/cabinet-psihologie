@@ -1,0 +1,26 @@
+{
+  "name": "Cabinet Psihologie & Psihoterapie București",
+  "short_name": "Cabinet Psihologie",
+  "description": "Spațiul tău sigur pentru vindecare. Psihoterapeut specializat în anxietate, depresie, traume și probleme de relație.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCFB",
+  "theme_color": "#4A7C7E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "medical", "lifestyle"],
+  "lang": "ro-RO"
+}

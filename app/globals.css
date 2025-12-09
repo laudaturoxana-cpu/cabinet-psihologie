@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* CSS Custom Properties pentru culori */
+:root {
+  --fundal-principal: #FDFCFB;
+  --fundal-secundar: #F5F3F0;
+  --primar: #4A7C7E;
+  --secundar: #8B9D83;
+  --accent-cald: #C9A87C;
+  --text-principal: #2C3E3F;
+  --text-secundar: #6B7F7E;
+  --alerta-blanda: #E8D5C4;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-fundal-principal text-text-principal font-paragraf;
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-titlu text-text-principal;
+  }
+
+  h1 {
+    @apply text-h1-mobile md:text-h1-desktop font-semibold leading-tight;
+  }
+
+  h2 {
+    @apply text-h2-mobile md:text-h2-desktop font-semibold leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-medium;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-medium;
+  }
+
+  p {
+    @apply text-body leading-relaxed-custom text-text-principal;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--fundal-secundar);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--secundar);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primar);
+  }
+
+  /* Focus styles pentru accesibilitate */
+  *:focus-visible {
+    outline: 2px solid var(--primar);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Container principal cu max-width */
+  .container-custom {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1320px;
+  }
+
+  /* Gradient subtil pentru hero */
+  .hero-gradient {
+    background: linear-gradient(135deg, var(--fundal-principal) 0%, var(--fundal-secundar) 100%);
+  }
+
+  /* Card hover effect subtil */
+  .card-hover {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .card-hover:hover {
+    @apply shadow-lg transform -translate-y-1;
+  }
+
+  /* Buton primary styling */
+  .btn-primary {
+    @apply bg-primar text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-md focus:ring-2 focus:ring-primar focus:ring-offset-2;
+  }
+
+  /* Buton secondary (ghost) styling */
+  .btn-secondary {
+    @apply border-2 border-primar text-primar px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-primar hover:text-white focus:ring-2 focus:ring-primar focus:ring-offset-2;
+  }
+
+  /* Link styling */
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Spacing consistent */
+  .section-spacing {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .section-spacing-small {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+}
+
+/* Animații custom */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading animation pentru formular */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

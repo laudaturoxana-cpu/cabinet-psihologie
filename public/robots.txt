@@ -1,0 +1,26 @@
+# robots.txt pentru Cabinet Psihologie
+
+# Permite toate crawlerele
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cabinetpsihologie.ro/sitemap.xml
+
+# Blocare foldere admin/private (dacă există)
+Disallow: /api/
+Disallow: /_next/
+
+# Crawler-specific rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Blocare bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

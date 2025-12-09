@@ -26,60 +26,125 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    font-size: 1.125rem;
-    line-height: 1.75;
+    font-size: 16px; /* Mobile: 16px pentru lizibilitate */
+    line-height: 1.6;
     background-color: #FDFCFB;
     color: #2C3E3F;
+    overflow-x: hidden;
+  }
+
+  /* Tablet: 18px */
+  @media (min-width: 768px) {
+    body {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+  }
+
+  /* Desktop: 18px */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 18px;
+      line-height: 1.75;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
     color: #2C3E3F;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
   }
 
+  /* H1 - Mobile: 28px, Tablet: 36px, Desktop: 48px */
   h1 {
-    font-size: 2.25rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  h2 {
-    font-size: 1.875rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-
-  h4 {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-
-  p {
-    font-size: 1.125rem;
-    line-height: 1.75;
-    color: #2C3E3F;
+    font-size: 1.75rem; /* 28px mobile */
   }
 
   @media (min-width: 768px) {
     h1 {
-      font-size: 3.5rem;
+      font-size: 2.25rem; /* 36px tablet */
     }
+  }
 
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 3rem; /* 48px desktop */
+    }
+  }
+
+  /* H2 - Mobile: 24px, Tablet: 30px, Desktop: 40px */
+  h2 {
+    font-size: 1.5rem; /* 24px mobile */
+  }
+
+  @media (min-width: 768px) {
     h2 {
-      font-size: 2.5rem;
+      font-size: 1.875rem; /* 30px tablet */
     }
+  }
 
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2.5rem; /* 40px desktop */
+    }
+  }
+
+  /* H3 - Mobile: 20px, Tablet: 24px, Desktop: 30px */
+  h3 {
+    font-size: 1.25rem; /* 20px mobile */
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
     h3 {
-      font-size: 1.875rem;
+      font-size: 1.5rem; /* 24px tablet */
     }
+  }
 
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 1.875rem; /* 30px desktop */
+    }
+  }
+
+  /* H4 - Mobile: 18px, Tablet: 20px, Desktop: 24px */
+  h4 {
+    font-size: 1.125rem; /* 18px mobile */
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.25rem; /* 20px tablet */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h4 {
+      font-size: 1.5rem; /* 24px desktop */
+    }
+  }
+
+  p {
+    font-size: 1rem; /* 16px mobile */
+    line-height: 1.6;
+    color: #2C3E3F;
+    margin-bottom: 1em;
+  }
+
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.0625rem; /* 17px tablet */
+      line-height: 1.7;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      font-size: 1.125rem; /* 18px desktop */
+      line-height: 1.75;
     }
   }
 }
@@ -96,7 +161,7 @@
 
   /* Custom scrollbar styling */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -119,26 +184,30 @@
     border-radius: 4px;
   }
 
-  /* Container principal cu max-width */
+  /* Container principal cu max-width - RESPONSIVE */
   .container-custom {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
+    padding-left: 1rem; /* 16px mobile */
     padding-right: 1rem;
-    max-width: 1320px;
+    max-width: 100%;
+    width: 100%;
   }
 
+  /* Tablet */
   @media (min-width: 640px) {
     .container-custom {
-      padding-left: 1.5rem;
+      padding-left: 1.5rem; /* 24px */
       padding-right: 1.5rem;
     }
   }
 
+  /* Desktop */
   @media (min-width: 1024px) {
     .container-custom {
-      padding-left: 2rem;
+      padding-left: 2rem; /* 32px */
       padding-right: 2rem;
+      max-width: 1320px;
     }
   }
 
@@ -157,42 +226,42 @@
     transform: translateY(-0.25rem);
   }
 
-  /* Spacing consistent */
+  /* Spacing consistent - RESPONSIVE */
   .section-spacing {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  @media (min-width: 768px) {
-    .section-spacing {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .section-spacing {
-      padding-top: 8rem;
-      padding-bottom: 8rem;
-    }
-  }
-
-  .section-spacing-small {
-    padding-top: 3rem;
+    padding-top: 3rem; /* Mobile: 48px */
     padding-bottom: 3rem;
   }
 
   @media (min-width: 768px) {
+    .section-spacing {
+      padding-top: 5rem; /* Tablet: 80px */
+      padding-bottom: 5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-spacing {
+      padding-top: 6rem; /* Desktop: 96px */
+      padding-bottom: 6rem;
+    }
+  }
+
+  .section-spacing-small {
+    padding-top: 2rem; /* Mobile: 32px */
+    padding-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
     .section-spacing-small {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
+      padding-top: 3rem; /* Tablet: 48px */
+      padding-bottom: 3rem;
     }
   }
 
   @media (min-width: 1024px) {
     .section-spacing-small {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
+      padding-top: 4rem; /* Desktop: 64px */
+      padding-bottom: 4rem;
     }
   }
 }
@@ -227,6 +296,26 @@
 
 .loading-spinner {
   animation: spin 1s linear infinite;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent horizontal scroll on mobile */
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Better text rendering on all devices */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Print styles */

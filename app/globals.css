@@ -20,36 +20,67 @@
 @layer base {
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   body {
-    @apply bg-fundal-principal text-text-principal font-paragraf;
+    font-family: 'Inter', sans-serif;
     font-size: 1.125rem;
     line-height: 1.75;
+    background-color: #FDFCFB;
+    color: #2C3E3F;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-titlu text-text-principal;
+    font-family: 'Cormorant Garamond', serif;
+    color: #2C3E3F;
   }
 
   h1 {
-    @apply text-h1-mobile md:text-h1-desktop font-semibold leading-tight;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.2;
   }
 
   h2 {
-    @apply text-h2-mobile md:text-h2-desktop font-semibold leading-tight;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.2;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-medium;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-medium;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
 
   p {
-    @apply text-body leading-relaxed-custom text-text-principal;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #2C3E3F;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1.875rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -90,8 +121,25 @@
 
   /* Container principal cu max-width */
   .container-custom {
-    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
     max-width: 1320px;
+  }
+
+  @media (min-width: 640px) {
+    .container-custom {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   /* Gradient subtil pentru hero */
@@ -101,35 +149,51 @@
 
   /* Card hover effect subtil */
   .card-hover {
-    @apply transition-all duration-300 ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .card-hover:hover {
-    @apply shadow-lg transform -translate-y-1;
-  }
-
-  /* Buton primary styling */
-  .btn-primary {
-    @apply bg-primar text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-md focus:ring-2 focus:ring-primar focus:ring-offset-2;
-  }
-
-  /* Buton secondary (ghost) styling */
-  .btn-secondary {
-    @apply border-2 border-primar text-primar px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-primar hover:text-white focus:ring-2 focus:ring-primar focus:ring-offset-2;
-  }
-
-  /* Link styling */
-  a {
-    @apply transition-colors duration-200;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-0.25rem);
   }
 
   /* Spacing consistent */
   .section-spacing {
-    @apply py-16 md:py-24 lg:py-32;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-spacing {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-spacing {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
   }
 
   .section-spacing-small {
-    @apply py-12 md:py-16 lg:py-20;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-spacing-small {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-spacing-small {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
   }
 }
 
@@ -163,13 +227,6 @@
 
 .loading-spinner {
   animation: spin 1s linear infinite;
-}
-
-/* Responsive typography adjustments */
-@media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-  }
 }
 
 /* Print styles */

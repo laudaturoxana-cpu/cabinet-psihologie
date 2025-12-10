@@ -2,19 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Import Google Fonts - MODERN & WARM */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* CSS Custom Properties pentru culori */
+/* CSS Custom Properties pentru culori - PALETĂ CALDĂ ȘI EMPATICĂ */
 :root {
-  --fundal-principal: #FDFCFB;
-  --fundal-secundar: #F5F3F0;
-  --primar: #4A7C7E;
-  --secundar: #8B9D83;
-  --accent-cald: #C9A87C;
-  --text-principal: #2C3E3F;
-  --text-secundar: #6B7F7E;
-  --alerta-blanda: #E8D5C4;
+  --fundal-principal: #FFF8F0;
+  --fundal-secundar: #FFF3E6;
+  --primar: #E17B5C;
+  --primar-dark: #C96846;
+  --primar-light: #F5A589;
+  --secundar: #6B9B88;
+  --secundar-dark: #547B6C;
+  --secundar-light: #8FB5A4;
+  --accent-cald: #D4A574;
+  --accent-roz: #E8B4A8;
+  --text-principal: #3D3027;
+  --text-secundar: #6B5D52;
+  --alerta-blanda: #FFE4D6;
+  --succes: #7FB69E;
+  --atentie: #F4B860;
 }
 
 @layer base {
@@ -28,8 +35,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px; /* Mobile: 16px pentru lizibilitate */
     line-height: 1.6;
-    background-color: #FDFCFB;
-    color: #2C3E3F;
+    background-color: #FFF8F0;
+    color: #3D3027;
     overflow-x: hidden;
   }
 
@@ -50,8 +57,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-    color: #2C3E3F;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #3D3027;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 0.5em;
@@ -130,7 +137,7 @@
   p {
     font-size: 1rem; /* 16px mobile */
     line-height: 1.6;
-    color: #2C3E3F;
+    color: #3D3027;
     margin-bottom: 1em;
   }
 

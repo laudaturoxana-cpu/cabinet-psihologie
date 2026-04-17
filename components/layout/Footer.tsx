@@ -4,8 +4,8 @@ import { Phone, Mail, Instagram, Facebook } from 'lucide-react';
 const footerNavigation = {
   navigare: [
     { name: 'Servicii', href: '#servicii' },
-    { name: 'Despre', href: '#despre' },
-    { name: 'Cum lucrez', href: '#proces' },
+    { name: 'Echipa', href: '#despre' },
+    { name: 'Cum lucrăm', href: '#proces' },
     { name: 'Întrebări frecvente', href: '#faq' },
     { name: 'Contact și programări', href: '#contact' },
   ],
@@ -61,11 +61,14 @@ export const Footer: React.FC = () => {
                 />
               </svg>
               <div className="font-titlu text-xl font-semibold text-text-principal">
-                Cabinet Psihologie
+                Cabinet de Psihologie
               </div>
             </div>
-            <p className="text-text-secundar italic mb-6">
-              Spațiul tău sigur pentru vindecare
+            <p className="text-text-secundar text-sm mb-2">
+              Psihologie · Psihiatrie · Logopedie
+            </p>
+            <p className="text-text-secundar italic mb-6 text-sm">
+              București și Online
             </p>
             <div className="space-y-3">
               <a
@@ -197,8 +200,8 @@ export const Footer: React.FC = () => {
         {/* Bottom Footer */}
         <div className="py-6 flex flex-col md:flex-row items-center justify-between text-sm text-text-secundar gap-4">
           <p>
-            © {currentYear} Cabinet Psihologie. Toate drepturile rezervate. <br className="md:hidden" />
-            Membru Colegiul Psihologilor din România nr. XXXXX
+            © {currentYear} Cabinet de Psihologie București. Toate drepturile rezervate. <br className="md:hidden" />
+            Membri Colegiul Psihologilor din România
           </p>
           <p className="text-xs">
             Ultima actualizare: {new Date().toLocaleDateString('ro-RO', { year: 'numeric', month: 'long' })}

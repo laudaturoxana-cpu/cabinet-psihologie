@@ -6,10 +6,10 @@ import { Button } from '@/components/ui/Button';
 import { Calendar, Shield, Clock, MessageCircle } from 'lucide-react';
 
 const badges = [
-  { icon: Calendar, text: 'Ședințe online și la cabinet' },
+  { icon: Calendar, text: 'Psihologie · Psihiatrie · Logopedie' },
   { icon: Shield, text: 'Confidențialitate totală garantată' },
-  { icon: Clock, text: 'Prima consultație: evaluare gratuită 15 min' },
-  { icon: MessageCircle, text: 'Răspund în max 24h' },
+  { icon: Clock, text: 'Evaluare inițială gratuită — 15 min' },
+  { icon: MessageCircle, text: 'Cabinet București și Online' },
 ];
 
 export const Hero: React.FC = () => {
@@ -53,15 +53,15 @@ export const Hero: React.FC = () => {
               prin ceea ce simți acum.
             </h1>
 
-            {/* Subtitlu - 3-4 propoziții, ton blând dar ferm */}
+            {/* Subtitlu */}
             <div className="space-y-4 text-lg md:text-xl text-text-secundar leading-relaxed-custom max-w-2xl">
               <p>
-                Indiferent dacă vii cu anxietate, depresie, traume sau pur și simplu
-                cu senzația că ceva nu e în regulă - aici ai un spațiu sigur.
+                Suntem o echipă tânără de psihologi, psihoterapeuți, psihiatru și logopezi
+                în București — cu ședințe disponibile și online.
               </p>
               <p>
-                Un loc unde poți fi vulnerabil/ă fără judecată, unde vorbim despre
-                ce doare cu adevărat și găsim împreună căi de vindecare.
+                Indiferent dacă vii cu anxietate, depresie, traume, dificultăți de limbaj
+                sau pur și simplu cu senzația că ceva nu e în regulă — suntem aici.
               </p>
               <p className="font-medium text-text-principal">
                 Primul pas e mereu cel mai greu. Și e în regulă.

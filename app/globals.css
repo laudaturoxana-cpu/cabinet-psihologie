@@ -5,23 +5,23 @@
 /* Import Google Fonts - MODERN & WARM */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* CSS Custom Properties pentru culori - PALETĂ CALDĂ ȘI EMPATICĂ */
+/* CSS Custom Properties pentru culori - PALETĂ MODERNĂ FOREST GREEN */
 :root {
-  --fundal-principal: #FFF8F0;
-  --fundal-secundar: #FFF3E6;
-  --primar: #E17B5C;
-  --primar-dark: #C96846;
-  --primar-light: #F5A589;
-  --secundar: #6B9B88;
-  --secundar-dark: #547B6C;
-  --secundar-light: #8FB5A4;
-  --accent-cald: #D4A574;
-  --accent-roz: #E8B4A8;
-  --text-principal: #3D3027;
-  --text-secundar: #6B5D52;
-  --alerta-blanda: #FFE4D6;
-  --succes: #7FB69E;
-  --atentie: #F4B860;
+  --fundal-principal: #f7f5f1;
+  --fundal-secundar: #ede9e3;
+  --primar: #3f5e55;
+  --primar-dark: #2f4a43;
+  --primar-light: #587d74;
+  --secundar: #cbb89a;
+  --secundar-dark: #b5a285;
+  --secundar-light: #ddd0ba;
+  --accent-cald: #cbb89a;
+  --accent-verde: #3f5e55;
+  --text-principal: #2e2e2e;
+  --text-secundar: #5e5a52;
+  --alerta-blanda: #e8e4dc;
+  --succes: #4a7c6f;
+  --atentie: #cbb89a;
 }
 
 @layer base {
@@ -35,8 +35,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px; /* Mobile: 16px pentru lizibilitate */
     line-height: 1.6;
-    background-color: #FFF8F0;
-    color: #3D3027;
+    background-color: #f7f5f1;
+    color: #2e2e2e;
     overflow-x: hidden;
   }
 
@@ -58,7 +58,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #3D3027;
+    color: #2e2e2e;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 0.5em;
@@ -137,7 +137,7 @@
   p {
     font-size: 1rem; /* 16px mobile */
     line-height: 1.6;
-    color: #3D3027;
+    color: #2e2e2e;
     margin-bottom: 1em;
   }
 

@@ -7,8 +7,9 @@ import { Button } from '@/components/ui/Button';
 
 const navigation = [
   { name: 'Servicii', href: '#servicii' },
-  { name: 'Despre', href: '#despre' },
-  { name: 'Cum lucrez', href: '#proces' },
+  { name: 'Echipa', href: '#despre' },
+  { name: 'Cum lucrăm', href: '#proces' },
+  { name: 'FAQ', href: '#faq' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -71,10 +72,10 @@ export const Header: React.FC = () => {
             </div>
             <div>
               <div className="font-titlu text-xl md:text-2xl font-semibold text-text-principal">
-                Cabinet Psihologie
+                Cabinet de Psihologie
               </div>
               <div className="text-xs text-text-secundar hidden md:block">
-                Spațiu sigur pentru vindecare
+                Psihologie · Psihiatrie · Logopedie
               </div>
             </div>
           </a>

@@ -9,34 +9,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // NOUA PALETĂ CALDĂ ȘI EMPATICĂ
+        // PALETĂ MODERNĂ CABINET PSIHOLOGIE — Forest Green + Sandy Beige
 
-        // Fundal - Tonuri calde de bej/cream
-        'fundal-principal': '#FFF8F0',  // Cream foarte cald - siguranță
-        'fundal-secundar': '#FFF3E6',   // Bej piersică - căldură
+        // Fundal - Crem pur și neutru
+        'fundal-principal': '#f7f5f1',  // Alb crem - puritate, spațiu
+        'fundal-secundar': '#ede9e3',   // Crem ușor mai închis - căldură
 
-        // Culori Primare - Teracotă/Coral moale (empatie, căldură)
-        'primar': '#E17B5C',            // Teracotă coral - empatie, căldură
-        'primar-dark': '#C96846',       // Teracotă mai închis - stabilitate
-        'primar-light': '#F5A589',      // Coral deschis - optimism
+        // Culori Primare - Verde Forest (liniște, echilibru, natură)
+        'primar': '#3f5e55',            // Verde forest - calm, echilibru
+        'primar-dark': '#2f4a43',       // Verde adânc - stabilitate, încredere
+        'primar-light': '#587d74',      // Verde mediu - deschidere, speranță
 
-        // Culori Secundare - Verde smarald moale (vindecare, speranță)
-        'secundar': '#6B9B88',          // Verde smarald moale - vindecare, natură
-        'secundar-dark': '#547B6C',     // Verde închis - stabilitate
-        'secundar-light': '#8FB5A4',    // Verde mint - freshness
+        // Culori Secundare - Bej Nisipos (căldură, naturalness)
+        'secundar': '#cbb89a',          // Bej nisipos - căldură, naturalness
+        'secundar-dark': '#b5a285',     // Bej mai închis - grounding
+        'secundar-light': '#ddd0ba',    // Bej deschis - prospețime
 
-        // Accent - Auriu cald (valoare, lumină)
-        'accent-cald': '#D4A574',       // Auriu miere - optimism, lumină
-        'accent-roz': '#E8B4A8',        // Roz pudră - afecțiune, blândețe
+        // Accent
+        'accent-cald': '#cbb89a',       // Bej nisipos - accent principal
+        'accent-verde': '#3f5e55',      // Verde pentru accente
 
         // Text
-        'text-principal': '#3D3027',    // Maro ciocolată - warm, nu negru rece
-        'text-secundar': '#6B5D52',     // Taupe - sofisticat, calm
+        'text-principal': '#2e2e2e',    // Aproape negru - lizibilitate maximă
+        'text-secundar': '#5e5a52',     // Gri cald - profesional, calm
 
         // Alerte și notificări
-        'alerta-blanda': '#FFE4D6',     // Piersică foarte deschis
-        'succes': '#7FB69E',            // Verde mentă
-        'atentie': '#F4B860',           // Galben miere
+        'alerta-blanda': '#e8e4dc',     // Crem light
+        'succes': '#4a7c6f',            // Verde forest variant
+        'atentie': '#cbb89a',           // Bej atenție
       },
       fontFamily: {
         // FONTURI MODERNE ȘI PRIETENOASE
@@ -77,8 +77,8 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'soft': '0 2px 15px -3px rgba(225, 123, 92, 0.1), 0 2px 6px -2px rgba(225, 123, 92, 0.05)',
-        'soft-lg': '0 10px 40px -10px rgba(225, 123, 92, 0.15), 0 2px 10px -2px rgba(225, 123, 92, 0.08)',
+        'soft': '0 2px 15px -3px rgba(63, 94, 85, 0.1), 0 2px 6px -2px rgba(63, 94, 85, 0.05)',
+        'soft-lg': '0 10px 40px -10px rgba(63, 94, 85, 0.15), 0 2px 10px -2px rgba(63, 94, 85, 0.08)',
       },
     },
   },

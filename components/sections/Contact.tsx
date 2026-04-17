@@ -327,7 +327,7 @@ export const Contact: React.FC = () => {
 
             {/* Adresa */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex items-center space-x-3 mb-4">
                 <MapPin className="w-6 h-6 text-primar" />
                 <h3 className="text-xl font-titlu font-semibold text-text-principal">
                   Adresa cabinet
@@ -337,16 +337,31 @@ export const Contact: React.FC = () => {
                 Strada Exemplu, nr. 123, bloc A1, scara 2, etaj 3, ap. 15<br />
                 Sector 1, București, 010101
               </p>
+
+              {/* Hartă Google Maps embed */}
+              <div className="rounded-xl overflow-hidden border border-fundal-secundar mb-4" style={{ height: '220px' }}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91427.55484718498!2d25.970880774999998!3d44.43602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4770adb5b7%3A0x58125cfb4949c45c!2sBucure%C8%99ti!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localizare cabinet psihologie București"
+                />
+              </div>
+
               <a
-                href="https://maps.google.com"
+                href="https://maps.google.com/?q=Bucuresti+Sector+1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-fundal-secundar text-primar px-4 py-2 rounded-lg hover:bg-primar hover:text-white transition-colors text-sm font-medium"
               >
                 Deschide în Google Maps →
               </a>
-              <p className="text-xs text-text-secundar mt-4">
-                Acces ușor cu transportul în comun (metrou Exemplu, autobuz 123)<br />
+              <p className="text-xs text-text-secundar mt-3">
+                Acces ușor cu transportul în comun (metrou, autobuz)<br />
                 Parcare disponibilă în zonă
               </p>
             </div>

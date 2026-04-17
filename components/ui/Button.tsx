@@ -2,7 +2,7 @@ import React from 'react';
 import { LucideIcon } from 'lucide-react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'gold' | 'gold-outline';
   size?: 'sm' | 'md' | 'lg';
   icon?: LucideIcon;
   iconPosition?: 'left' | 'right';
@@ -24,9 +24,11 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variantStyles = {
-    primary: 'bg-primar text-white hover:bg-opacity-90 hover:shadow-md focus:ring-primar',
+    primary: 'bg-primar text-white hover:bg-primar-dark hover:shadow-md focus:ring-primar',
     secondary: 'border-2 border-primar text-primar hover:bg-primar hover:text-white focus:ring-primar',
     ghost: 'text-primar hover:bg-fundal-secundar focus:ring-primar',
+    gold: 'bg-auriu text-white hover:bg-auriu-dark hover:shadow-gold focus:ring-auriu font-semibold tracking-wide',
+    'gold-outline': 'border-2 border-auriu text-auriu hover:bg-auriu hover:text-white focus:ring-auriu',
   };
 
   const sizeStyles = {

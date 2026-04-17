@@ -40,7 +40,7 @@ export const Card: React.FC<CardProps> = ({
       className={`${baseStyles} ${variantStyles[variant]} ${hoverStyles} ${className}`}
     >
       {Icon && (
-        <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-fundal-secundar text-primar">
+        <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl" style={{ background: 'linear-gradient(135deg, rgba(201,169,110,0.15), rgba(201,169,110,0.08))', color: '#a8834a', border: '1px solid rgba(201,169,110,0.25)' }}>
           <Icon className="w-6 h-6" />
         </div>
       )}

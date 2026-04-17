@@ -228,7 +228,7 @@ export const Contact: React.FC = () => {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  variant="primary"
+                  variant="gold"
                   size="lg"
                   loading={isSubmitting}
                   className="w-full"

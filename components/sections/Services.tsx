@@ -195,7 +195,7 @@ export const Services: React.FC = () => {
                   {/* CTA */}
                   <div className="mt-auto">
                     <Button
-                      variant={service.highlight ? 'primary' : 'secondary'}
+                      variant={service.highlight ? 'gold' : 'secondary'}
                       size="sm"
                       onClick={scrollToContact}
                       className="w-full"

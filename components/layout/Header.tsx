@@ -45,9 +45,10 @@ export const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-fundal-principal/95 backdrop-blur-md shadow-md'
+          ? 'bg-fundal-principal/96 backdrop-blur-md shadow-soft'
           : 'bg-transparent'
       }`}
+      style={isScrolled ? { borderBottom: '1px solid rgba(201,169,110,0.25)' } : {}}
     >
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20 md:h-24">
@@ -56,18 +57,8 @@ export const Header: React.FC = () => {
             <div className="relative">
               {/* Logo - cerc incomplet care se închide (simbol vindecare) */}
               <svg width="40" height="40" viewBox="0 0 40 40" className="transition-all duration-300 group-hover:scale-110">
-                <circle
-                  cx="20"
-                  cy="20"
-                  r="16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeDasharray="85 15"
-                  strokeLinecap="round"
-                  className="text-primar"
-                  style={{ transform: 'rotate(-90deg)', transformOrigin: 'center' }}
-                />
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#3f5e55" strokeWidth="2.5" strokeDasharray="85 15" strokeLinecap="round" style={{ transform: 'rotate(-90deg)', transformOrigin: 'center' }} />
+                <circle cx="20" cy="20" r="10" fill="none" stroke="#c9a96e" strokeWidth="1.5" strokeDasharray="40 25" strokeLinecap="round" style={{ transform: 'rotate(45deg)', transformOrigin: 'center' }} />
               </svg>
             </div>
             <div>

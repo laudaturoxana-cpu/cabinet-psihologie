@@ -74,7 +74,10 @@ export const Process: React.FC = () => {
                 {/* Number + Icon */}
                 <div className="flex items-start md:items-center gap-4 md:gap-0">
                   <div className="relative flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-primar text-white flex items-center justify-center text-2xl font-bold font-titlu shadow-lg z-10 relative">
+                    <div
+                      className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold font-titlu shadow-lg z-10 relative text-white"
+                      style={{ background: 'linear-gradient(135deg, #c9a96e, #a8834a)', boxShadow: '0 4px 15px rgba(201,169,110,0.5)' }}
+                    >
                       {step.number}
                     </div>
                   </div>
@@ -89,7 +92,7 @@ export const Process: React.FC = () => {
                     <h3 className="text-2xl font-titlu font-semibold text-text-principal">
                       {step.title}
                     </h3>
-                    <span className="text-sm font-medium text-primar bg-primar/10 px-3 py-1 rounded-full mt-2 sm:mt-0 inline-block w-fit">
+                    <span className="text-sm font-medium px-3 py-1 rounded-full mt-2 sm:mt-0 inline-block w-fit" style={{ background: 'rgba(201,169,110,0.15)', color: '#a8834a' }}>
                       {step.duration}
                     </span>
                   </div>

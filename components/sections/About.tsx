@@ -96,6 +96,56 @@ export const About: React.FC = () => {
           </p>
         </motion.div>
 
+        {/* Intro foto + text */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-0 max-w-5xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-gold-lg"
+        >
+          {/* Photo */}
+          <div
+            className="relative min-h-[300px] lg:min-h-[400px]"
+            style={{
+              backgroundImage: `
+                linear-gradient(135deg, rgba(47,74,67,0.3) 0%, rgba(168,131,74,0.2) 100%),
+                url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=85&w=900&auto=format&fit=crop')
+              `,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="absolute bottom-6 left-6">
+              <div
+                className="rounded-xl px-5 py-3"
+                style={{ background: 'rgba(47,74,67,0.85)', backdropFilter: 'blur(10px)', border: '1px solid rgba(201,169,110,0.3)' }}
+              >
+                <p className="text-white font-semibold text-sm">Cabinet București</p>
+                <p className="text-sm" style={{ color: '#e8d5b0' }}>Spațiu warm & profesional</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Text */}
+          <div className="bg-primar p-10 flex flex-col justify-center" style={{ background: 'linear-gradient(135deg, #2f4a43, #3f5e55)' }}>
+            <div className="h-px w-10 mb-6" style={{ background: '#c9a96e' }} />
+            <h3 className="font-titlu text-2xl font-semibold text-white mb-4">
+              Un spațiu creat cu intenție
+            </h3>
+            <p className="text-white/75 leading-relaxed mb-4">
+              Cabinetul nostru din București a fost gândit ca un refugiu — luminos, calm, fără formalismul rece al unui spital sau clinici tradiționale.
+            </p>
+            <p className="text-white/75 leading-relaxed mb-6">
+              O echipă tânără care crede că terapia poate fi și caldă, și serioasă în același timp.
+            </p>
+            <div className="flex items-center space-x-2">
+              <div className="h-px flex-1" style={{ background: 'rgba(201,169,110,0.3)' }} />
+              <span className="text-xs uppercase tracking-widest" style={{ color: '#c9a96e' }}>București & Online</span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-20">
           {teamMembers.map((member, index) => {
@@ -145,7 +195,8 @@ export const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-primar rounded-3xl p-10 md:p-14 max-w-5xl mx-auto mb-16 text-white relative overflow-hidden"
+          className="rounded-3xl p-10 md:p-14 max-w-5xl mx-auto mb-16 text-white relative overflow-hidden"
+          style={{ background: 'linear-gradient(135deg, #2f4a43 0%, #3f5e55 50%, #a8834a 100%)' }}
         >
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{

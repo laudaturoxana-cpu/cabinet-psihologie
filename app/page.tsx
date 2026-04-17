@@ -13,6 +13,7 @@ import { FAQ } from '@/components/sections/FAQ';
 import { Pricing } from '@/components/sections/Pricing';
 import { Contact } from '@/components/sections/Contact';
 import { CreatorCard } from '@/components/sections/CreatorCard';
+import { VisualBanner } from '@/components/sections/VisualBanner';
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
 
       {/* Process Section */}
       <Process />
+
+      {/* Visual Banner Section */}
+      <VisualBanner />
 
       {/* Testimonials Section */}
       <Testimonials />

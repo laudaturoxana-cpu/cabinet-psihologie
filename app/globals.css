@@ -5,23 +5,25 @@
 /* Import Google Fonts - MODERN & WARM */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* CSS Custom Properties pentru culori - PALETĂ MODERNĂ FOREST GREEN */
+/* CSS Custom Properties — Forest Green × Champagne Gold */
 :root {
   --fundal-principal: #f7f5f1;
-  --fundal-secundar: #ede9e3;
+  --fundal-secundar: #f5edd8;
+  --fundal-cald: #f0e6cc;
   --primar: #3f5e55;
   --primar-dark: #2f4a43;
   --primar-light: #587d74;
   --secundar: #cbb89a;
   --secundar-dark: #b5a285;
   --secundar-light: #ddd0ba;
-  --accent-cald: #cbb89a;
-  --accent-verde: #3f5e55;
+  --auriu: #c9a96e;
+  --auriu-dark: #a8834a;
+  --auriu-light: #e8d5b0;
   --text-principal: #2e2e2e;
   --text-secundar: #5e5a52;
-  --alerta-blanda: #e8e4dc;
+  --alerta-blanda: #f0e6cc;
   --succes: #4a7c6f;
-  --atentie: #cbb89a;
+  --atentie: #c9a96e;
 }
 
 @layer base {

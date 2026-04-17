@@ -101,16 +101,16 @@ export const Pricing: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 ${
-                option.highlight ? 'border-2 border-accent-cald ring-4 ring-accent-cald/10' : ''
+                option.highlight ? 'border-2 border-auriu ring-4 ring-auriu/10' : ''
               }`}
             >
               {option.highlight && (
-                <div className="bg-accent-cald text-white text-sm px-4 py-2 rounded-full inline-block mb-4 font-medium">
+                <div className="text-white text-sm px-4 py-2 rounded-full inline-block mb-4 font-semibold" style={{ background: 'linear-gradient(135deg, #c9a96e, #a8834a)' }}>
                   Recomandat pentru început
                 </div>
               )}
 
-              <div className={`w-14 h-14 rounded-full ${option.highlight ? 'bg-accent-cald/10 text-accent-cald' : 'bg-primar/10 text-primar'} flex items-center justify-center mb-6`}>
+              <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 ${option.highlight ? '' : 'bg-primar/10 text-primar'}`} style={option.highlight ? { background: 'rgba(201,169,110,0.12)', color: '#a8834a' } : {}}>
                 <option.icon className="w-7 h-7" />
               </div>
 
@@ -137,7 +137,7 @@ export const Pricing: React.FC = () => {
               </ul>
 
               <Button
-                variant={option.highlight ? 'primary' : 'secondary'}
+                variant={option.highlight ? 'gold' : 'secondary'}
                 size="md"
                 onClick={scrollToContact}
                 className="w-full"
@@ -181,7 +181,7 @@ export const Pricing: React.FC = () => {
                   {pkg.title}
                 </h4>
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-3xl font-bold text-primar">{pkg.price}</span>
+                  <span className="text-3xl font-bold" style={{ color: '#a8834a' }}>{pkg.price}</span>
                   <span className="text-text-secundar line-through">{pkg.originalPrice}</span>
                 </div>
               </div>

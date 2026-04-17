@@ -339,7 +339,7 @@ export const Contact: React.FC = () => {
               </p>
 
               {/* Hartă Google Maps embed */}
-              <div className="rounded-xl overflow-hidden border border-fundal-secundar mb-4" style={{ height: '220px' }}>
+              <div className="rounded-xl overflow-hidden border border-fundal-secundar mb-4" style={{ height: 'clamp(180px, 35vw, 240px)' }}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91427.55484718498!2d25.970880774999998!3d44.43602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4770adb5b7%3A0x58125cfb4949c45c!2sBucure%C8%99ti!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
                   width="100%"

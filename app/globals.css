@@ -178,17 +178,17 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--secundar);
+    background: var(--auriu);
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--primar);
+    background: var(--auriu-dark);
   }
 
   /* Focus styles pentru accesibilitate */
   *:focus-visible {
-    outline: 2px solid var(--primar);
+    outline: 2px solid var(--auriu);
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -325,6 +325,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Mobile tap highlight — elimină highlight-ul gri pe iOS */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Input și select — font size minim 16px pe mobile (previne zoom iOS) */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
 }
 
 /* Print styles */

@@ -102,12 +102,14 @@ export const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-0 max-w-5xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-gold-lg"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-0 max-w-5xl mx-auto mb-16 rounded-2xl overflow-hidden"
+          style={{ boxShadow: '0 10px 40px -8px rgba(201, 169, 110, 0.35)' }}
         >
           {/* Photo */}
           <div
-            className="relative min-h-[300px] lg:min-h-[400px]"
+            className="relative"
             style={{
+              minHeight: 'clamp(220px, 50vw, 420px)',
               backgroundImage: `
                 linear-gradient(135deg, rgba(47,74,67,0.3) 0%, rgba(168,131,74,0.2) 100%),
                 url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=85&w=900&auto=format&fit=crop')

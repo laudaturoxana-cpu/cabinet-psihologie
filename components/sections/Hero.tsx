@@ -7,9 +7,9 @@ import { Calendar, Shield, Clock, MapPin } from 'lucide-react';
 
 const badges = [
   { icon: Calendar, text: 'Psihologie · Psihiatrie · Logopedie' },
-  { icon: Shield, text: 'Confidențialitate totală garantată' },
-  { icon: Clock, text: 'Evaluare inițială gratuită — 15 min' },
-  { icon: MapPin, text: 'Cabinet București și Online' },
+  { icon: Shield, text: 'Confidențialitate garantată' },
+  { icon: Clock, text: 'Evaluare inițială gratuită' },
+  { icon: MapPin, text: 'București și Online' },
 ];
 
 const stats = [
@@ -47,8 +47,9 @@ export const Hero: React.FC = () => {
         backgroundPosition: 'center',
       }}
     >
-      {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-[0.03]"
+      {/* Texture overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
           backgroundSize: '28px 28px',
@@ -57,15 +58,18 @@ export const Hero: React.FC = () => {
 
       {/* Main content */}
       <div className="flex-1 flex items-center relative z-10">
-        <div className="container-custom py-24 md:py-36">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div
+          className="container-custom w-full"
+          style={{ paddingTop: 'clamp(5rem, 12vw, 9rem)', paddingBottom: 'clamp(3rem, 6vw, 5rem)' }}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
             {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: 'easeOut' }}
-              className="lg:col-span-7 space-y-8"
+              className="lg:col-span-7 space-y-6 md:space-y-8"
             >
               {/* Label */}
               <motion.div
@@ -74,8 +78,11 @@ export const Hero: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center space-x-2"
               >
-                <div className="h-px w-10 bg-auriu" />
-                <span className="text-auriu text-sm font-semibold uppercase tracking-widest">
+                <div className="h-px w-8 bg-auriu" />
+                <span
+                  className="text-auriu font-semibold uppercase tracking-widest"
+                  style={{ fontSize: 'clamp(0.65rem, 1.5vw, 0.75rem)' }}
+                >
                   Cabinet de Psihologie București
                 </span>
               </motion.div>
@@ -83,7 +90,7 @@ export const Hero: React.FC = () => {
               {/* H1 */}
               <h1
                 className="text-white font-titlu leading-tight"
-                style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.1 }}
+                style={{ fontSize: 'clamp(1.85rem, 5.5vw, 3.5rem)', lineHeight: 1.1 }}
               >
                 Nu trebuie să treci singur
                 <br />
@@ -93,58 +100,63 @@ export const Hero: React.FC = () => {
               </h1>
 
               {/* Subtitlu */}
-              <div className="space-y-4 max-w-2xl">
-                <p className="text-white/80 text-lg md:text-xl leading-relaxed">
+              <div className="space-y-3 max-w-2xl">
+                <p
+                  className="text-white/80 leading-relaxed"
+                  style={{ fontSize: 'clamp(0.95rem, 2.2vw, 1.2rem)' }}
+                >
                   Suntem o echipă tânără de psihologi, psihoterapeuți, psihiatru și logopezi —
                   în București și online. Un spațiu sigur, fără judecată.
                 </p>
-                <p className="font-medium" style={{ color: '#e8d5b0' }}>
+                <p className="font-medium" style={{ color: '#e8d5b0', fontSize: 'clamp(0.9rem, 2vw, 1.1rem)' }}>
                   Primul pas e mereu cel mai greu. Și e în regulă.
                 </p>
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
                 <Button
                   variant="gold"
-                  size="lg"
+                  size="md"
                   onClick={() => scrollToSection('#contact')}
+                  className="w-full sm:w-auto justify-center"
                 >
                   Programează prima ședință
                 </Button>
-                <Button
-                  variant="ghost"
-                  size="lg"
+                <button
                   onClick={() => scrollToSection('#servicii')}
-                  className="text-white border-2 border-white/30 hover:border-auriu hover:text-auriu hover:bg-transparent"
+                  className="w-full sm:w-auto px-7 py-4 rounded-lg text-base font-medium transition-all duration-300 border-2 text-white/90 hover:text-auriu"
+                  style={{ borderColor: 'rgba(255,255,255,0.25)', background: 'transparent' }}
                 >
                   Cum te putem ajuta →
-                </Button>
+                </button>
               </div>
 
-              {/* Badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+              {/* Badges — 2 coloane pe mobile */}
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-2">
                 {badges.map((badge, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                    className="flex items-center space-x-3"
+                    className="flex items-center space-x-2"
                   >
                     <div
-                      className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: 'rgba(201, 169, 110, 0.2)', border: '1px solid rgba(201, 169, 110, 0.4)' }}
+                      className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
+                      style={{ backgroundColor: 'rgba(201, 169, 110, 0.2)', border: '1px solid rgba(201, 169, 110, 0.35)' }}
                     >
-                      <badge.icon className="w-3.5 h-3.5" style={{ color: '#e8d5b0' }} />
+                      <badge.icon className="w-3 h-3" style={{ color: '#e8d5b0' }} />
                     </div>
-                    <span className="text-white/75 text-sm">{badge.text}</span>
+                    <span className="text-white/70 leading-tight" style={{ fontSize: 'clamp(0.65rem, 1.8vw, 0.8rem)' }}>
+                      {badge.text}
+                    </span>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Card flotant dreapta */}
+            {/* Card flotant dreapta — ascuns pe mobile */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -160,7 +172,6 @@ export const Hero: React.FC = () => {
                   boxShadow: '0 25px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
                 }}
               >
-                {/* Gold accent line */}
                 <div className="absolute top-0 left-8 right-8 h-px" style={{ background: 'linear-gradient(90deg, transparent, #c9a96e, transparent)' }} />
 
                 <p className="text-white/60 text-xs uppercase tracking-widest mb-6">De ce să ne alegi</p>
@@ -187,7 +198,6 @@ export const Hero: React.FC = () => {
                   ))}
                 </div>
 
-                {/* CTA in card */}
                 <div className="mt-8 pt-6" style={{ borderTop: '1px solid rgba(201, 169, 110, 0.2)' }}>
                   <button
                     onClick={() => scrollToSection('#contact')}
@@ -198,7 +208,7 @@ export const Hero: React.FC = () => {
                       boxShadow: '0 4px 15px rgba(201, 169, 110, 0.4)',
                     }}
                   >
-                    Reservă evaluarea gratuită →
+                    Rezervă evaluarea gratuită →
                   </button>
                 </div>
               </div>
@@ -208,26 +218,35 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Stats bar — fundal semi-transparent */}
+      {/* Stats bar */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.8 }}
         className="relative z-10 border-t"
-        style={{ borderColor: 'rgba(201, 169, 110, 0.2)', backgroundColor: 'rgba(47, 74, 67, 0.7)', backdropFilter: 'blur(10px)' }}
+        style={{
+          borderColor: 'rgba(201, 169, 110, 0.2)',
+          backgroundColor: 'rgba(47, 74, 67, 0.75)',
+          backdropFilter: 'blur(10px)',
+        }}
       >
-        <div className="container-custom py-5">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0">
+        <div className="container-custom py-4 md:py-5">
+          <div className="grid grid-cols-4 gap-2 md:gap-0">
             {stats.map((stat, idx) => (
               <div
                 key={idx}
                 className={`text-center ${idx < stats.length - 1 ? 'md:border-r' : ''}`}
                 style={{ borderColor: 'rgba(201, 169, 110, 0.2)' }}
               >
-                <p className="text-2xl md:text-3xl font-titlu font-bold" style={{ color: '#c9a96e' }}>
+                <p
+                  className="font-titlu font-bold"
+                  style={{ fontSize: 'clamp(1.1rem, 3vw, 1.875rem)', color: '#c9a96e', lineHeight: 1.1 }}
+                >
                   {stat.value}
                 </p>
-                <p className="text-white/60 text-xs mt-1 uppercase tracking-wide">{stat.label}</p>
+                <p className="text-white/60 uppercase tracking-wide mt-1" style={{ fontSize: 'clamp(0.55rem, 1.5vw, 0.7rem)' }}>
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
